@@ -49,7 +49,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
   return (
     <>
       {/* Row Container */}
-      {data.map((item, index) => (
+      {data?.map((item, index) => (
         <Box key={index} sx={rowStyle}>
           <Box display="flex" alignItems="center" flexDirection="column">
             <Typography variant="h5" fontWeight="600" color={colorTheme.main}>

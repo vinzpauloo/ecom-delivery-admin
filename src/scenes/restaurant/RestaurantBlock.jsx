@@ -27,7 +27,7 @@ const RestaurantBlock = () => {
   const { getRestaurantDeclined } = useRestaurantByStatus();
 
   const loadRestaurantDeclined = async () => {
-    const response = await getRestaurantDeclined({ status: "Declined" });
+    const response = await getRestaurantDeclined({ approval: "Hold" });
     console.log("~~~", response);
     setRestaurantBlockList(response);
   };
