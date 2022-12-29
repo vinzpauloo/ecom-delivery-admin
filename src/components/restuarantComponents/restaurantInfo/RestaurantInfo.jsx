@@ -74,7 +74,9 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Full Name</Typography>
-              <Typography sx={subtitleStyle}>Edward Scissorhand</Typography>
+              <Typography sx={subtitleStyle}>
+                {item.owner.first_name} {item.owner.last_name}
+              </Typography>
             </Box>
           </Box>
           <Box sx={colStyle}>
@@ -84,7 +86,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Contact number</Typography>
-              <Typography sx={subtitleStyle}>09161234567</Typography>
+              <Typography sx={subtitleStyle}>{item.owner.mobile}</Typography>
             </Box>
           </Box>
           <Box sx={colStyle}>
@@ -94,7 +96,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Email</Typography>
-              <Typography sx={subtitleStyle}>edsci@gmail.com</Typography>
+              <Typography sx={subtitleStyle}>{item.owner.email}</Typography>
             </Box>
           </Box>
           <Box
@@ -123,11 +125,13 @@ const RestaurantInfo = ({ data, colorTheme }) => {
                 <Typography sx={{ ...titleStyle, textAlign: "left" }}>
                   Email Address
                 </Typography>
-                <Typography sx={subtitleStyle}>info@jollibee.com.ph</Typography>
+                <Typography sx={subtitleStyle}>
+                  {item.restaurant_email}{" "}
+                </Typography>
               </Box>
               <Box sx={contentStyle}>
-                <Typography sx={titleStyle}>Type of Cuisine</Typography>
-                <Typography sx={subtitleStyle}>Fast Food (Asian)</Typography>
+                <Typography sx={titleStyle}>Restaurant ID</Typography>
+                <Typography sx={subtitleStyle}>{item.id}</Typography>
               </Box>
             </Box>
             <Box
