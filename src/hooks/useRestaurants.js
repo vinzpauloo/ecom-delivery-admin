@@ -1,16 +1,20 @@
 import axios, { AxiosError } from "axios";
 import { useCalculateHash } from "./useCalculateHash";
+import { useAuthHeader } from "react-auth-kit";
 
 export const useRestaurants = () => {
   const { calculateHash } = useCalculateHash();
+  const authHeader = useAuthHeader();
 
-  const getRestaurants = async () => {
+  const getRestaurants = async (data) => {
     try {
       // START: Access get all restaurants API
       const endpoint = "api/merchants";
       const options = {
+        params: data,
         headers: {
-          "X-Authorization": calculateHash(endpoint),
+          Authorization: authHeader(),
+          "X-Authorization": calculateHash(endpoint, data),
         },
         // withCredentials: true,
       };

@@ -57,7 +57,7 @@ const Applicant = () => {
   const { getRestaurants, updateRestaurantStatus } = useRestaurants();
 
   const loadRestaurants = async () => {
-    const response = await getRestaurants();
+    const response = await getRestaurants({ approval: "Applied" });
     console.log("getRestaurants response", response);
     setList(response);
     setIsLoading(false);
