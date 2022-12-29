@@ -55,7 +55,10 @@ const RiderList = () => {
   const { getRiderApproved } = useRiderByStatus();
 
   const loadRiderApproved = async () => {
-    const response = await getRiderApproved({ approval: "Approved" });
+    const response = await getRiderApproved({
+      with: "user",
+      approval: "Approved",
+    });
     console.log("@@@", response);
     setRiderApprovedList(response);
   };

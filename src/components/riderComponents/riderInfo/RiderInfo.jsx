@@ -58,7 +58,7 @@ const RiderInfo = ({ data, colorTheme }) => {
             }}
           >
             <img
-              src={rider}
+              src={item.user.photo_url}
               alt=""
               style={{ height: "90px", width: "90px", borderRadius: "50%" }}
             />
@@ -66,7 +66,9 @@ const RiderInfo = ({ data, colorTheme }) => {
           <Box sx={colStyle}>
             <Box sx={{ ...content, marginBottom: "10px" }}>
               <Typography sx={titleStyle}>Rider’s Full Name</Typography>
-              <Typography sx={subTitleStyle}>Valentinno Rossi</Typography>
+              <Typography sx={subTitleStyle}>
+                {item.user.first_name} {item.user.last_name}
+              </Typography>
             </Box>
             <Box sx={content}>
               <Typography sx={titleStyle}>Motor Vehicle Brand</Typography>
@@ -86,7 +88,7 @@ const RiderInfo = ({ data, colorTheme }) => {
           <Box sx={colStyle}>
             <Box sx={{ ...content, marginBottom: "10px" }}>
               <Typography sx={titleStyle}>Mobile Number</Typography>
-              <Typography sx={subTitleStyle}>(+63) 917 456 7890</Typography>
+              <Typography sx={subTitleStyle}>{item.user.mobile}</Typography>
             </Box>
             <Box sx={content}>
               <Typography sx={titleStyle}>Year</Typography>
@@ -96,7 +98,7 @@ const RiderInfo = ({ data, colorTheme }) => {
           <Box sx={colStyle}>
             <Box sx={{ ...content, marginBottom: "10px" }}>
               <Typography sx={titleStyle}>Email Address</Typography>
-              <Typography sx={subTitleStyle}>alexan@1bit.com.ph</Typography>
+              <Typography sx={subTitleStyle}>{item.user.email}</Typography>
             </Box>
             <Box sx={content}>
               <Typography sx={titleStyle}>OR Number</Typography>

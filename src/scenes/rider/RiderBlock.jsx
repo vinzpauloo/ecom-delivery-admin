@@ -55,7 +55,10 @@ const RiderBlock = () => {
   const { getRiderDeclined } = useRiderByStatus();
 
   const loadRiderDeclined = async () => {
-    const response = await getRiderDeclined({ approval: "Hold" });
+    const response = await getRiderDeclined({
+      with: "user",
+      approval: "Declined",
+    });
     console.log("!!!", response);
     setRiderBlockList(response);
   };

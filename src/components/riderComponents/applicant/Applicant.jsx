@@ -57,7 +57,7 @@ const Applicant = ({ data }) => {
   const { getRiders, updateRiderStatus } = useRiders();
 
   const loadRiders = async () => {
-    const response = await getRiders({ approval: "Applied" });
+    const response = await getRiders({ with: "user", approval: "Applied" });
     console.log("getRider response", response);
     setList(response);
     setIsLoading(false);
@@ -97,7 +97,7 @@ const Applicant = ({ data }) => {
             </Typography>
             <Box width="120px" height="60px">
               <img
-                src={license}
+                src={item.user.photo_url}
                 alt=""
                 style={{ height: "100%", width: "100%" }}
               />
@@ -106,7 +106,9 @@ const Applicant = ({ data }) => {
           <Box sx={colStyle}>
             <Box sx={contentStyle} mb="10px">
               <Typography sx={titleStyle}>Rider’s Full Name</Typography>
-              <Typography sx={subtitleStyle}>Valentinno Rossi</Typography>
+              <Typography sx={subtitleStyle}>
+                {item.user.first_name} {item.user.last_name}
+              </Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Motor Vehicle Brand</Typography>
@@ -126,7 +128,7 @@ const Applicant = ({ data }) => {
           <Box sx={colStyle}>
             <Box sx={contentStyle} mb="10px">
               <Typography sx={titleStyle}>Mobile Number</Typography>
-              <Typography sx={subtitleStyle}>(+63) 917 456 7890</Typography>
+              <Typography sx={subtitleStyle}>{item.user.mobile}</Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Year</Typography>
@@ -136,7 +138,7 @@ const Applicant = ({ data }) => {
           <Box sx={colStyle}>
             <Box sx={contentStyle} mb="10px">
               <Typography sx={titleStyle}>Email Address</Typography>
-              <Typography sx={subtitleStyle}>alexan@1bit.com.ph</Typography>
+              <Typography sx={subtitleStyle}>{item.user.email}</Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>OR Number</Typography>
