@@ -1,16 +1,20 @@
 import axios, { AxiosError } from "axios";
 import { useCalculateHash } from "./useCalculateHash";
+import { useAuthHeader } from "react-auth-kit";
 
 export const useRiders = () => {
   const { calculateHash } = useCalculateHash();
+  const authHeader = useAuthHeader();
 
-  const getRiders = async () => {
+  const getRiders = async (data) => {
     try {
       // START: Access get all riders API
       const endpoint = "api/riders";
       const options = {
+        params: data,
         headers: {
-          "X-Authorization": calculateHash(endpoint),
+          Authorization: authHeader(),
+          "X-Authorization": calculateHash(endpoint, data),
         },
         // withCredentials: true,
       };

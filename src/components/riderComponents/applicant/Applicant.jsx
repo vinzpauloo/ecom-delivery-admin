@@ -57,7 +57,7 @@ const Applicant = ({ data }) => {
   const { getRiders, updateRiderStatus } = useRiders();
 
   const loadRiders = async () => {
-    const response = await getRiders();
+    const response = await getRiders({ approval: "Applied" });
     console.log("getRider response", response);
     setList(response);
     setIsLoading(false);
