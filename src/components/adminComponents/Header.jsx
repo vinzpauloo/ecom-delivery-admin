@@ -43,7 +43,7 @@ const Header = () => {
       marginTop="2px"
     >
       <Box
-        gridColumn="span 3"
+        gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
@@ -76,15 +76,14 @@ const Header = () => {
           </p>
         </Box>
       </Box>
-      <Box
+      {/* <Box
         gridColumn="span 3"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
         gap="10px"
         padding="10px"
-        // sx={{ cursor: "pointer" }}
-        // onClick={() => navigate(`/admin/pagelikes`)}
+      
       >
         <Box
           style={{
@@ -106,12 +105,12 @@ const Header = () => {
               marginBottom: "15px",
             }}
           >
-            {/* 50,126 */}
+            
           </p>
         </Box>
-      </Box>
+      </Box> */}
       <Box
-        gridColumn="span 3"
+        gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
@@ -145,7 +144,7 @@ const Header = () => {
         </Box>
       </Box>
       <Box
-        gridColumn="span 3"
+        gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
