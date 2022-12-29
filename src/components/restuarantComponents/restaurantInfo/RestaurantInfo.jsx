@@ -57,7 +57,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Typography>
 
             <img
-              src={item.photo}
+              src={item.restaurants.photo}
               style={{
                 width: "70px",
                 height: "70px",
@@ -75,7 +75,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Full Name</Typography>
               <Typography sx={subtitleStyle}>
-                {item.owner.first_name} {item.owner.last_name}
+                {item.first_name} {item.last_name}
               </Typography>
             </Box>
           </Box>
@@ -86,7 +86,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Contact number</Typography>
-              <Typography sx={subtitleStyle}>{item.owner.mobile}</Typography>
+              <Typography sx={subtitleStyle}>{item.mobile}</Typography>
             </Box>
           </Box>
           <Box sx={colStyle}>
@@ -96,7 +96,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Email</Typography>
-              <Typography sx={subtitleStyle}>{item.owner.email}</Typography>
+              <Typography sx={subtitleStyle}>{item.email}</Typography>
             </Box>
           </Box>
           <Box

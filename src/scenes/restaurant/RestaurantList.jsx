@@ -26,14 +26,14 @@ const RestaurantList = () => {
   const [restaurantApprovedList, setRestaurantApprovedList] = useState([]);
   const { getRestaurantApproved } = useRestaurantByStatus();
 
-  const loadRestaurantApproved = async (owner) => {
-    const params = { with: owner };
+  const loadRestaurantApproved = async (restaurants) => {
+    const params = { with: restaurants };
     const response = await getRestaurantApproved(params);
     console.log("getRestaurantApprovedResponse", response);
     setRestaurantApprovedList(response);
   };
   useEffect(() => {
-    loadRestaurantApproved("owner");
+    loadRestaurantApproved("restaurants");
   }, []);
   return (
     <Box p={"20px"} bgcolor={"#454d55"}>
