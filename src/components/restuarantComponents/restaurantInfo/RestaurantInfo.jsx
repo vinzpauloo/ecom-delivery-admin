@@ -57,7 +57,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
             </Typography>
 
             <img
-              src={item.restaurants.photo}
+              src={item.restaurants[0].photo_url}
               style={{
                 width: "70px",
                 height: "70px",
@@ -126,7 +126,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
                   Email Address
                 </Typography>
                 <Typography sx={subtitleStyle}>
-                  {item.restaurant_email}{" "}
+                  {item.restaurants[0].email}{" "}
                 </Typography>
               </Box>
               <Box sx={contentStyle}>

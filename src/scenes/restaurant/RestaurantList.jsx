@@ -27,7 +27,7 @@ const RestaurantList = () => {
   const { getRestaurantApproved } = useRestaurantByStatus();
 
   const loadRestaurantApproved = async (restaurants) => {
-    const params = { with: restaurants };
+    const params = { with: restaurants, approval: "Approved" };
     const response = await getRestaurantApproved(params);
     console.log("getRestaurantApprovedResponse", response);
     setRestaurantApprovedList(response);
