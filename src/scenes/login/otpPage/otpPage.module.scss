@@ -1,0 +1,30 @@
+.loginContainer {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../assets/images/loginbg.png") center no-repeat;
+  background-size: 100% 100%;
+  animation: zoom 1s ease-in;
+  @keyframes zoom {
+    from {
+      background-size: 250% 250%;
+    }
+    to {
+      background-size: 100% 100%;
+    }
+  }
+  .monkeyLogo {
+    height: 143px;
+    margin: 140px auto 40px;
+  }
+  .formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 360px;
+    width: 830px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+  }
+}

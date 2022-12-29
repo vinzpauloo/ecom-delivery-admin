@@ -1,0 +1,21 @@
+{
+    "color": {},
+    "form": {
+      "inputType": {
+        "text": "text",
+        "password": "password"
+      },
+      "error": {
+        "email": "*Please enter a valid email.",
+        "passwordMin": "*Password must be at least 7 characters.",
+        "passwordMax": "*Password must be at most 16 characters.",
+        "passwordConfirm": "*Password don't match.",
+        "missingOtp": "Please input your OTP code."
+      },
+      "success": {
+        "updatePassword": "You have successfully changed your password!"
+      }
+    },
+    "otpCountdown": 300
+  }
+  
