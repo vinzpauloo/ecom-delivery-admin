@@ -70,7 +70,9 @@ const RestaurantInfo = ({ data, colorTheme }) => {
           <Box sx={colStyle}>
             <Box sx={{ ...contentStyle, marginBottom: "10px" }}>
               <Typography sx={titleStyle}>Restaurant Name</Typography>
-              <Typography sx={subtitleStyle}>{item.name}</Typography>
+              <Typography sx={subtitleStyle}>
+                {item.restaurants[0].name}
+              </Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Full Name</Typography>
@@ -82,7 +84,9 @@ const RestaurantInfo = ({ data, colorTheme }) => {
           <Box sx={colStyle}>
             <Box sx={{ ...contentStyle, marginBottom: "10px" }}>
               <Typography sx={titleStyle}>Address</Typography>
-              <Typography sx={subtitleStyle}>{item.address}</Typography>
+              <Typography sx={subtitleStyle}>
+                {item.restaurants[0].address}
+              </Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Contact number</Typography>

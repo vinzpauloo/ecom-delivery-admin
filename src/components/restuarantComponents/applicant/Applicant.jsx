@@ -180,10 +180,10 @@ const Applicant = () => {
           <Box
             sx={{
               ...colStyle,
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
             }}
           >
-            <Button
+            {/* <Button
               sx={{
                 background: "#F0BB62",
                 width: "100%",
@@ -196,7 +196,7 @@ const Applicant = () => {
               <Typography variant="p" color="initial" fontWeight="600">
                 Hold
               </Typography>
-            </Button>
+            </Button> */}
             <Button
               sx={{
                 background: "#D52B1D",
