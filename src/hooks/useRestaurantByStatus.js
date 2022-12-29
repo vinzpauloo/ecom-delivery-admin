@@ -6,7 +6,7 @@ export const useRestaurantByStatus = () => {
 
   const getRestaurantDeclined = async (data) => {
     try {
-      const endpoint = "api/merchants";
+      const endpoint = "api/restaurants";
       const options = {
         params: data,
         headers: {
@@ -36,7 +36,7 @@ export const useRestaurantByStatus = () => {
 
   const getRestaurantApproved = async (data) => {
     try {
-      const endpoint = "api/merchants";
+      const endpoint = "api/restaurants";
       const options = {
         params: data,
         headers: {
