@@ -115,7 +115,7 @@ const RiderInfo = ({ data, colorTheme }) => {
               <Typography sx={subTitleStyle}>{item.plate_number}</Typography>
             </Box>
           </Box>
-          <Box sx={{ ...colStyle, justifyContent: "center" }}>
+          {/* <Box sx={{ ...colStyle, justifyContent: "center" }}>
             <Typography variant="p" fontWeight="600" textAlign="center">
               Driver’s License
             </Typography>
@@ -126,7 +126,7 @@ const RiderInfo = ({ data, colorTheme }) => {
                 style={{ height: "100%", width: "100%" }}
               />
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       ))}
     </>
