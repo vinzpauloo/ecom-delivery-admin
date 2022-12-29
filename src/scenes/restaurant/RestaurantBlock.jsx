@@ -26,13 +26,16 @@ const RestaurantBlock = () => {
   const [restaurantBlockList, setRestaurantBlockList] = useState([]);
   const { getRestaurantDeclined } = useRestaurantByStatus();
 
-  const loadRestaurantDeclined = async () => {
-    const response = await getRestaurantDeclined({ approval: "Hold" });
+  const loadRestaurantDeclined = async (restaurants, approval) => {
+    const response = await getRestaurantDeclined({
+      with: restaurants,
+      approval: approval,
+    });
     console.log("~~~", response);
     setRestaurantBlockList(response);
   };
   useEffect(() => {
-    loadRestaurantDeclined();
+    loadRestaurantDeclined("restaurants", "Declined");
   }, []);
   return (
     <Box p={"20px"} bgcolor={"#454d55"}>
