@@ -57,7 +57,10 @@ const Applicant = () => {
   const { getRestaurants, updateRestaurantStatus } = useRestaurants();
 
   const loadRestaurants = async () => {
-    const response = await getRestaurants({ approval: "Applied" });
+    const response = await getRestaurants({
+      with: "restaurants",
+      approval: "Applied",
+    });
     console.log("getRestaurants response", response);
     setList(response);
     setIsLoading(false);
@@ -98,7 +101,7 @@ const Applicant = () => {
             </Typography>
 
             <img
-              src={item.photo}
+              src={item.restaurants[0].photo_url}
               style={{ width: "70px", height: "70px", borderRadius: "5px" }}
               alt=""
             />
