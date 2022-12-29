@@ -1,4 +1,4 @@
-import RestaurantInfo from "../../components/restuarantComponents/restaurantInfo/RestaurantInfo";
+import RestaurantInfo from "../../components/restuarantComponents/restaurantInfoBlock/RestaurantInfo";
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Statistics from "../../components/globalComponents/statistics/Statistics";
