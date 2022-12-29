@@ -33,6 +33,7 @@ const AlertModal = () => {
 
   // Reset state values on modal close
   const handleClose = () => {
+    window.location.reload();
     setOpen(false);
     dispatch(handleModalStatus(""));
   };
