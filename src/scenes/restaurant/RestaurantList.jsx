@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Statistics from "../../components/globalComponents/statistics/Statistics";
 import { useRestaurantByStatus } from "../../hooks/useRestaurantByStatus";
+import Header from "../../components/adminComponents/Header";
 
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const colorTheme = {
@@ -35,7 +36,8 @@ const RestaurantList = () => {
   }, []);
   return (
     <Box p={"20px"} bgcolor={"#454d55"}>
-      <Statistics />
+      {/* <Statistics /> */}
+      <Header />
       <Typography
         variant="h3"
         color="#FFF"

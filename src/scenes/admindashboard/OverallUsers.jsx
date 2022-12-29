@@ -163,7 +163,7 @@ const OverallUsers = () => {
           </Box>
 
           <Box display="flex" justifyContent="center" gap="10px" mt="25px">
-            <Box
+            {/* <Box
               backgroundColor="#01CDFF"
               width="400px"
               height="54px"
@@ -188,8 +188,8 @@ const OverallUsers = () => {
                 <img src={instagram} alt="" />
                 <img src={facebook} alt="" />
               </Box>
-            </Box>
-            <Box
+            </Box> */}
+            {/* <Box
               backgroundColor="#BF9742"
               width="400px"
               height="54px"
@@ -212,7 +212,7 @@ const OverallUsers = () => {
               <Box display="flex" gap="5px" mr="5px">
                 <img src={calendar} alt="" />
               </Box>
-            </Box>
+            </Box> */}
             <Box
               backgroundColor="#A100FC"
               width="400px"
@@ -277,7 +277,7 @@ const OverallUsers = () => {
           flexDirection="column"
           justifyContent="space-between"
           gap="10px"
-          gridColumn="span 6"
+          gridColumn="span 12"
         >
           <Box
             backgroundColor={colors.primary[400]}
@@ -301,7 +301,7 @@ const OverallUsers = () => {
             </Box>
           </Box>
         </Box>
-        <Box
+        {/* <Box
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
@@ -329,7 +329,7 @@ const OverallUsers = () => {
               </Typography>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* 5TH ROW */}
@@ -340,7 +340,7 @@ const OverallUsers = () => {
         gap="10px"
       >
         {/* STATISTICS BAR  */}
-        <Box
+        {/* <Box
           backgroundColor={colors.primary[400]}
           height="360px"
           gridColumn="span 12"
@@ -349,18 +349,16 @@ const OverallUsers = () => {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            // gap="150px"
+          
             p="10px 30px"
             textAlign="center"
-            // marginLeft="90px"
+            
           >
             <Typography fontSize="25px" fontWeight="600">
               USER STATISTICS
             </Typography>
 
-            {/* <Typography fontSize="20px" fontWeight="600" marginLeft="90px">
-              2022
-            </Typography> */}
+         
 
             <Box display="flex" gap="20px" mr="200px">
               <Box display="flex" gap="5px">
@@ -382,7 +380,7 @@ const OverallUsers = () => {
           <Box height="345px" m="-50px -8px 0 -8px">
             <BarChart />
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

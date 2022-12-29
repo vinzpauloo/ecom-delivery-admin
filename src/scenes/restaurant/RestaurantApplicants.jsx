@@ -2,13 +2,15 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import Applicant from "../../components/restuarantComponents/applicant/Applicant";
 import Statistics from "../../components/globalComponents/statistics/Statistics";
+import Header from "../../components/adminComponents/Header";
 
 const sampleData = [1, 2, 3, 4, 5, 6, 7, 8];
 
 const RestaurantApplicants = () => {
   return (
     <Box p={"20px"} bgcolor={"#454d55"}>
-      <Statistics />
+      {/* <Statistics /> */}
+      <Header />
       <Typography
         variant="h3"
         color="#FFF"

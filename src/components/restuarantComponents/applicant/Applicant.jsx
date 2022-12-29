@@ -98,7 +98,7 @@ const Applicant = () => {
             </Typography>
 
             <img
-              src={rest2}
+              src={item.photo}
               style={{ width: "70px", height: "70px", borderRadius: "5px" }}
               alt=""
             />

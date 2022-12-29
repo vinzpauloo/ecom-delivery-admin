@@ -2,6 +2,7 @@ import RestaurantInfo from "../../components/restuarantComponents/restaurantInfo
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Statistics from "../../components/globalComponents/statistics/Statistics";
+import Header from "../../components/adminComponents/Header";
 import { useRestaurantByStatus } from "../../hooks/useRestaurantByStatus";
 
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -35,7 +36,7 @@ const RestaurantBlock = () => {
   }, []);
   return (
     <Box p={"20px"} bgcolor={"#454d55"}>
-      <Statistics />
+      <Header />
       <Box bgcolor="#151c26" p="5px 15px" maxHeight="790px" overflow="auto">
         {/* the data is need in a array form */}
         <RestaurantInfo data={restaurantBlockList} colorTheme={colorTheme} />

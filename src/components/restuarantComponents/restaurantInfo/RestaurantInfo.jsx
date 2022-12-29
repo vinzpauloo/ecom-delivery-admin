@@ -142,7 +142,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
               <Typography sx={subtitleStyle}>{item.description}</Typography>
             </Box>
           </Box>
-          <Box
+          {/* <Box
             sx={{
               ...colStyle,
               justifyContent: "space-around",
@@ -185,7 +185,7 @@ const RestaurantInfo = ({ data, colorTheme }) => {
                 {colorTheme.button2.text}
               </Typography>
             </Button>
-          </Box>
+          </Box> */}
         </Box>
       ))}
     </>

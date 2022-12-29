@@ -38,7 +38,7 @@ const SalesUpdate = () => {
           flexDirection="column"
           justifyContent="space-between"
           gap="10px"
-          gridColumn="span 6"
+          gridColumn="span 12"
         >
           <Box
             backgroundColor={colors.primary[400]}
@@ -62,7 +62,7 @@ const SalesUpdate = () => {
             </Box>
           </Box>
         </Box>
-        <Box
+        {/* <Box
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
@@ -90,7 +90,7 @@ const SalesUpdate = () => {
               </Typography>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* 3RD ROW */}
@@ -147,7 +147,7 @@ const SalesUpdate = () => {
       </Box>
 
       {/* 4TH ROW */}
-      <Box
+      {/* <Box
         marginTop="4px"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
@@ -214,10 +214,6 @@ const SalesUpdate = () => {
                   OPT-2
                 </Typography>
               </Button>
-              {/* <Box sx={{ cursor: "pointer" }}>
-                <img src={opt1} alt="" />
-              </Box>
-              <img src={opt2} alt="" /> */}
             </Box>
           </Box>
 
@@ -231,7 +227,7 @@ const SalesUpdate = () => {
             <LineChart />
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

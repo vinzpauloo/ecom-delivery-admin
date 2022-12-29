@@ -207,7 +207,7 @@ const CustomerDashboard = () => {
                   <img src={totalusers} alt="" />
                 </Box>
               </Box>
-              <Box
+              {/* <Box
                 backgroundColor="#A100FC"
                 width="400px"
                 height="54px"
@@ -230,13 +230,13 @@ const CustomerDashboard = () => {
                 <Box display="flex" gap="5px" mr="5px">
                   <img src={totaluserordered} alt="" />
                 </Box>
-              </Box>
-              <Box
+              </Box> */}
+              {/* <Box
                 backgroundColor="#F75F86"
                 width="400px"
                 height="54px"
                 display="flex"
-                //   justifyContent="center"
+                
                 alignItems="center"
                 p={1}
                 borderRadius="5px"
@@ -254,21 +254,20 @@ const CustomerDashboard = () => {
                 <Box display="flex" gap="5px" mr="5px">
                   <img src={totalcanceledorders} alt="" />
                 </Box>
-              </Box>
+              </Box> */}
             </Box>
           </Box>
         </Box>
 
         {/* 4TH ROW */}
-        <Box
+        {/* <Box
           marginTop="10px"
           display="grid"
           gridTemplateColumns="repeat(12, 1fr)"
           gap="10px"
         >
           <Box
-            // backgroundColor={colors.primary[400]}
-            // height="250px"
+          
             gridColumn="span 12"
           >
             <Box
@@ -276,9 +275,9 @@ const CustomerDashboard = () => {
               gap="65px"
               justifyContent="space-around"
               alignItems="center"
-              // position="absolute"
+             
             >
-              {/* Order Count Wave */}
+             
               <Box border="1px solid white" height="185px" mb="20px">
                 <Box>
                   <Typography fontSize="25px" fontWeight="300" p={1}>
@@ -303,12 +302,12 @@ const CustomerDashboard = () => {
                 </Box>
               </Box>
 
-              {/* Pie Chart */}
+             
               <Box sx={{ width: 160, height: 400 }} m="-190px 0 0 0">
                 <PieChart />
               </Box>
 
-              {/* 1st Progress Bar */}
+             
               <Box
                 display="flex"
                 flexDirection="column"
@@ -322,38 +321,38 @@ const CustomerDashboard = () => {
                       <CircularProgressbarWithChildren
                         value={value}
                         styles={{
-                          // Customize the root svg element
+                          
                           root: {},
-                          // Customize the path, i.e. the "completed progress"
+                         
                           path: {
-                            // Path color
+                            
                             stroke: `#009EFF`,
-                            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                           
                             strokeLinecap: "butt",
-                            // Customize transition animation
+                            
                             transition: "stroke-dashoffset 2s ease 0s",
-                            // Rotate the path
+                            
                             transform: "rotate(0.15turn)",
                             transformOrigin: "center center",
                           },
-                          // Customize the circle behind the path, i.e. the "total progress"
+                         
                           trail: {
-                            // Trail color
+                            
                             stroke: "#d6d6d6",
-                            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                           
                             strokeLinecap: "butt",
-                            // Rotate the trail
+                            
                             transform: "rotate(0.25turn)",
                             transformOrigin: "center center",
                           },
-                          // Customize the text
+                          
                           text: {
-                            // Text color
+                            
                             fill: "#f88",
-                            // Text size
+                           
                             fontSize: "16px",
                           },
-                          // Customize background - only used when the `background` prop is true
+                         
                           background: {
                             fill: "#3e98c7",
                           },
@@ -371,7 +370,7 @@ const CustomerDashboard = () => {
                 </Box>
               </Box>
 
-              {/* 2nd Progress Bar */}
+             
               <Box
                 display="flex"
                 flexDirection="column"
@@ -385,38 +384,38 @@ const CustomerDashboard = () => {
                       <CircularProgressbarWithChildren
                         value={value}
                         styles={{
-                          // Customize the root svg element
+                         
                           root: {},
-                          // Customize the path, i.e. the "completed progress"
+                        
                           path: {
-                            // Path color
+                            
                             stroke: `#7F167F`,
-                            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                            
                             strokeLinecap: "butt",
-                            // Customize transition animation
+                           
                             transition: "stroke-dashoffset 2s ease 0s",
-                            // Rotate the path
+                           
                             transform: "rotate(0.15turn)",
                             transformOrigin: "center center",
                           },
-                          // Customize the circle behind the path, i.e. the "total progress"
+                         
                           trail: {
-                            // Trail color
+                            
                             stroke: "#d6d6d6",
-                            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                            
                             strokeLinecap: "butt",
-                            // Rotate the trail
+                            
                             transform: "rotate(0.25turn)",
                             transformOrigin: "center center",
                           },
-                          // Customize the text
+                        
                           text: {
-                            // Text color
+                           
                             fill: "#7F167F",
-                            // Text size
+                           
                             fontSize: "16px",
                           },
-                          // Customize background - only used when the `background` prop is true
+                          
                           background: {
                             fill: "#7F167F",
                           },
@@ -434,7 +433,7 @@ const CustomerDashboard = () => {
                 </Box>
               </Box>
 
-              {/* 3rd Progress Bar */}
+            
               <Box
                 display="flex"
                 flexDirection="column"
@@ -448,38 +447,38 @@ const CustomerDashboard = () => {
                       <CircularProgressbarWithChildren
                         value={value}
                         styles={{
-                          // Customize the root svg element
+                         
                           root: {},
-                          // Customize the path, i.e. the "completed progress"
+                         
                           path: {
-                            // Path color
+                           
                             stroke: `#DC3535`,
-                            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                           
                             strokeLinecap: "butt",
-                            // Customize transition animation
+                            
                             transition: "stroke-dashoffset 2s ease 0s",
-                            // Rotate the path
+                           
                             transform: "rotate(0.15turn)",
                             transformOrigin: "center center",
                           },
-                          // Customize the circle behind the path, i.e. the "total progress"
+                         
                           trail: {
-                            // Trail color
+                            
                             stroke: "#d6d6d6",
-                            // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+                          
                             strokeLinecap: "butt",
-                            // Rotate the trail
+                            
                             transform: "rotate(0.25turn)",
                             transformOrigin: "center center",
                           },
-                          // Customize the text
+                         
                           text: {
-                            // Text color
+                           
                             fill: "#DC3535",
-                            // Text size
+                            
                             fontSize: "16px",
                           },
-                          // Customize background - only used when the `background` prop is true
+                         
                           background: {
                             fill: "#3e98c7",
                           },
@@ -498,10 +497,10 @@ const CustomerDashboard = () => {
               </Box>
             </Box>
           </Box>
-        </Box>
+        </Box> */}
 
         {/* 5TH ROW */}
-        <Box
+        {/* <Box
           marginTop="0px"
           display="grid"
           gridTemplateColumns="repeat(12, 1fr)"
@@ -517,7 +516,7 @@ const CustomerDashboard = () => {
             </Typography>
             <Stream />
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

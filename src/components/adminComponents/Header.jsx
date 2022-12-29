@@ -49,8 +49,8 @@ const Header = () => {
         alignItems="center"
         gap="10px"
         padding="10px"
-        sx={{ cursor: "pointer" }}
-        onClick={handleClick}
+        // sx={{ cursor: "pointer" }}
+        // onClick={handleClick}
       >
         <Box
           style={{
@@ -83,8 +83,8 @@ const Header = () => {
         alignItems="center"
         gap="10px"
         padding="10px"
-        sx={{ cursor: "pointer" }}
-        onClick={() => navigate(`/admin/pagelikes`)}
+        // sx={{ cursor: "pointer" }}
+        // onClick={() => navigate(`/admin/pagelikes`)}
       >
         <Box
           style={{

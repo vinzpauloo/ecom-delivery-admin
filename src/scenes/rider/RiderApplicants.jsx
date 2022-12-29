@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import Applicant from "../../components/riderComponents/applicant/Applicant";
 import Statistics from "../../components/globalComponents/statistics/Statistics";
+import Header from "../../components/adminComponents/Header";
 import SummaryCount from "../../components/globalComponents/summaryCount/SummaryCount";
 import img1 from "../../assets/images/img1.png";
 import img2 from "../../assets/images/img2.png";
@@ -38,7 +39,8 @@ const summaryCount = [
 const RiderApplicants = () => {
   return (
     <Box p="20px" bgcolor="#454d55">
-      <Statistics />
+      {/* <Statistics /> */}
+      <Header />
       <Box p="20px" bgcolor="#151C26">
         <SummaryCount data={summaryCount} />
         <Typography

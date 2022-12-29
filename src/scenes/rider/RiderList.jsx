@@ -8,6 +8,7 @@ import img2 from "../../assets/images/img2.png";
 import img3 from "../../assets/images/img3.png";
 import img4 from "../../assets/images/img4.png";
 import { useRiderByStatus } from "../../hooks/useRiderByStatus";
+import Header from "../../components/adminComponents/Header";
 
 const summaryCount = [
   {
@@ -63,7 +64,8 @@ const RiderList = () => {
   }, []);
   return (
     <Box p="20px" bgcolor="#454d55">
-      <Statistics />
+      {/* <Statistics /> */}
+      <Header />
       <Box p="20px" bgcolor="#151C26">
         <SummaryCount data={summaryCount} />
         <Typography

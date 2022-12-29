@@ -593,7 +593,7 @@ const AdminDashboard = () => {
         display="grid"
         gridTemplateColumns="repeat(9, 1fr)"
         marginTop="10px"
-        alignItems="center"
+        alignItems="flex-start"
         gap="10px"
       >
         <Box
@@ -685,7 +685,7 @@ const AdminDashboard = () => {
               </Box> */}
             </Box>
 
-            <Box
+            {/* <Box
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -694,7 +694,7 @@ const AdminDashboard = () => {
               height="17px"
             >
               <Button style={{ color: "#25E6DA" }}>View List</Button>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
 
@@ -808,7 +808,7 @@ const AdminDashboard = () => {
                 <p>Shawarma Shack</p>
               </Box> */}
             </Box>
-            <Box
+            {/* <Box
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -817,7 +817,7 @@ const AdminDashboard = () => {
               height="17px"
             >
               <Button style={{ color: "#25E6DA" }}>View List</Button>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
 
@@ -826,7 +826,7 @@ const AdminDashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="10px"
-          height="268px"
+          height="fit-content"
           width="auto"
         >
           <Box display="flex" justifyContent="space-between">
@@ -911,7 +911,7 @@ const AdminDashboard = () => {
                 <p>Novelene</p>
               </Box> */}
             </Box>
-            <Box
+            {/* <Box
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -920,7 +920,7 @@ const AdminDashboard = () => {
               height="17px"
             >
               <Button style={{ color: "#25E6DA" }}>View List</Button>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>

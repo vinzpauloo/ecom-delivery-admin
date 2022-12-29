@@ -25,18 +25,18 @@ const mainMenu = [
         title: "Dashboard",
         to: "/admin",
       },
-      {
-        title: "Check Users",
-        to: "/",
-      },
-      {
-        title: "Create User",
-        to: "/",
-      },
-      {
-        title: "Change Permissions",
-        to: "/",
-      },
+      // {
+      //   title: "Check Users",
+      //   to: "/",
+      // },
+      // {
+      //   title: "Create User",
+      //   to: "/",
+      // },
+      // {
+      //   title: "Change Permissions",
+      //   to: "/",
+      // },
     ],
   },
   {
@@ -44,10 +44,10 @@ const mainMenu = [
     icon: menuRestaurants,
     iconHover: menuRestaurantsHover,
     subMenu: [
-      {
-        title: "Dashboard",
-        to: "/restaurant",
-      },
+      // {
+      //   title: "Dashboard",
+      //   to: "/restaurant",
+      // },
       {
         title: "Applicants",
         to: "/restaurant/applicant",
@@ -67,10 +67,10 @@ const mainMenu = [
     icon: menuRiders,
     iconHover: menuRidersHover,
     subMenu: [
-      {
-        title: "Dashboard",
-        to: "/rider",
-      },
+      // {
+      //   title: "Dashboard",
+      //   to: "/rider",
+      // },
       {
         title: "Applicants",
         to: "/rider/applicant",
@@ -94,58 +94,39 @@ const mainMenu = [
         title: "Dashboard",
         to: "/customer",
       },
-      {
-        title: "User List",
-        to: "/customer/list",
-      },
-      {
-        title: "Banned Users",
-        to: "/customer/banned",
-      },
+      // {
+      //   title: "User List",
+      //   to: "/customer/list",
+      // },
+      // {
+      //   title: "Banned Users",
+      //   to: "/customer/banned",
+      // },
     ],
   },
-  {
-    title: "Orders",
-    icon: menuOrders,
-    iconHover: menuOrdersHover,
-    subMenu: [
-      {
-        title: "Delivered",
-        to: "/order/Delivered",
-      },
-      {
-        title: "Cancelled",
-        to: "/order/Cancelled",
-      },
-      {
-        title: "History",
-        to: "/order/History",
-      },
-    ],
-  },
-  {
-    title: "Integrations",
-    icon: menuInteractions,
-    iconHover: menuInteractionsHover,
-    subMenu: [
-      {
-        title: "Main Page",
-        to: "/integrations",
-      },
-      {
-        title: "Meta",
-        to: "/",
-      },
-      {
-        title: "Pusher",
-        to: "/",
-      },
-      {
-        title: "Vonage",
-        to: "/",
-      },
-    ],
-  },
+  // {
+  //   title: "Integrations",
+  //   icon: menuInteractions,
+  //   iconHover: menuInteractionsHover,
+  //   subMenu: [
+  //     {
+  //       title: "Main Page",
+  //       to: "/integrations",
+  //     },
+  //     {
+  //       title: "Meta",
+  //       to: "/",
+  //     },
+  //     {
+  //       title: "Pusher",
+  //       to: "/",
+  //     },
+  //     {
+  //       title: "Vonage",
+  //       to: "/",
+  //     },
+  //   ],
+  // },
   {
     title: "Settings",
     icon: menuSettings,
