@@ -109,7 +109,9 @@ const Applicant = () => {
           <Box sx={colStyle}>
             <Box sx={contentStyle} mb="10px">
               <Typography sx={titleStyle}>Restaurant Name</Typography>
-              <Typography sx={subtitleStyle}>Jollibee</Typography>
+              <Typography sx={subtitleStyle}>
+                {item.restaurants[0].name}{" "}
+              </Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Full Name</Typography>
@@ -122,7 +124,7 @@ const Applicant = () => {
             <Box sx={contentStyle} mb="10px">
               <Typography sx={titleStyle}>Address</Typography>
               <Typography variant="p" sx={subtitleStyle}>
-                #123 Brgy Angilan, Panglao
+                {item.restaurants[0].address}
               </Typography>
             </Box>
             <Box sx={contentStyle}>
@@ -133,7 +135,9 @@ const Applicant = () => {
           <Box sx={colStyle}>
             <Box sx={contentStyle} mb="10px">
               <Typography sx={titleStyle}>Mobile Number</Typography>
-              <Typography sx={subtitleStyle}>09179876543</Typography>
+              <Typography sx={subtitleStyle}>
+                {item.restaurants[0].contact_number}{" "}
+              </Typography>
             </Box>
             <Box sx={contentStyle}>
               <Typography sx={titleStyle}>Owner’s Email</Typography>
@@ -145,7 +149,7 @@ const Applicant = () => {
               ...colStyle,
               gridColumn: "span 2",
               alignItems: "flex-start",
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
             }}
           >
             <Box
@@ -161,19 +165,23 @@ const Applicant = () => {
                 <Typography sx={{ ...titleStyle, textAlign: "left" }}>
                   Email Address
                 </Typography>
-                <Typography sx={subtitleStyle}>info@jollibee.com.ph</Typography>
+                <Typography sx={subtitleStyle}>
+                  {item.restaurants[0].email}{" "}
+                </Typography>
               </Box>
               <Box sx={contentStyle}>
-                <Typography sx={titleStyle}>Type of Cuisine</Typography>
-                <Typography sx={subtitleStyle}>Fast Food (Asian)</Typography>
+                <Typography sx={titleStyle}>Merchant ID</Typography>
+                <Typography sx={subtitleStyle}>
+                  {item.restaurants[0].merchant_id}
+                </Typography>
               </Box>
             </Box>
             <Box sx={{ ...contentStyle, alignItems: "flex-start" }}>
               <Typography sx={{ ...titleStyle, textAlign: "left" }}>
-                Short Restaurant Description
+                Status
               </Typography>
               <Typography sx={subtitleStyle}>
-                Fast Food Chain - with chicken specialty and meals
+                {item.restaurants[0].approval}
               </Typography>
             </Box>
           </Box>
