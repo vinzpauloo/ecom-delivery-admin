@@ -93,7 +93,7 @@ const Applicant = ({ data }) => {
         <Box key={index} sx={rowStyle}>
           <Box sx={{ ...colStyle, justifyContent: "center" }}>
             <Typography variant="p" fontWeight="600" textAlign="center">
-              Driver’s License
+              Rider's Photo
             </Typography>
             <Box width="120px" height="60px">
               <img
