@@ -57,7 +57,7 @@ const mainMenu = [
         to: "/restaurant/list",
       },
       {
-        title: "Block Listed",
+        title: "Blocked List",
         to: "/restaurant/block",
       },
     ],
@@ -80,7 +80,7 @@ const mainMenu = [
         to: "/rider/list",
       },
       {
-        title: "Block Listed",
+        title: "Blocked List",
         to: "/rider/block",
       },
     ],
