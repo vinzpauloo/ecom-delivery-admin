@@ -85,25 +85,25 @@ const mainMenu = [
       },
     ],
   },
-  {
-    title: "Customers",
-    icon: menuCustomers,
-    iconHover: menuCustomersHover,
-    subMenu: [
-      {
-        title: "Dashboard",
-        to: "/customer",
-      },
-      // {
-      //   title: "User List",
-      //   to: "/customer/list",
-      // },
-      // {
-      //   title: "Banned Users",
-      //   to: "/customer/banned",
-      // },
-    ],
-  },
+  // {
+  //   title: "Customers",
+  //   icon: menuCustomers,
+  //   iconHover: menuCustomersHover,
+  //   subMenu: [
+  //     {
+  //       title: "Dashboard",
+  //       to: "/customer",
+  //     },
+  //     {
+  //       title: "User List",
+  //       to: "/customer/list",
+  //     },
+  //     {
+  //       title: "Banned Users",
+  //       to: "/customer/banned",
+  //     },
+  //   ],
+  // },
   // {
   //   title: "Integrations",
   //   icon: menuInteractions,
@@ -128,9 +128,9 @@ const mainMenu = [
   //   ],
   // },
   {
-    title: "Settings",
-    icon: menuSettings,
-    iconHover: menuSettingsHover,
+    // title: "Settings",
+    // icon: menuSettings,
+    // iconHover: menuSettingsHover,
   },
 ];
 

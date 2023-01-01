@@ -76,7 +76,7 @@ const OverallUsers = () => {
           flexDirection="column"
           justifyContent="space-between"
           gap="10px"
-          gridColumn="span 6"
+          gridColumn="span 12"
         >
           <Box backgroundColor={colors.primary[400]} height="201px">
             <Box>
@@ -90,12 +90,17 @@ const OverallUsers = () => {
               </Typography>
             </Box>
 
-            <Box height="201px" m="-20px 100px 0 -20px" color="black">
+            <Box
+              width="750px"
+              height="201px"
+              m="-20px 100px 0 150px"
+              color="black"
+            >
               <Waffle />
             </Box>
           </Box>
         </Box>
-        <Box
+        {/* <Box
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
@@ -118,7 +123,7 @@ const OverallUsers = () => {
               <Waffle />
             </Box>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* 3RD ROW */}
@@ -263,124 +268,6 @@ const OverallUsers = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
-
-      {/* 4TH ROW */}
-      <Box
-        marginTop="10px"
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
-        gap="10px"
-      >
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-between"
-          gap="10px"
-          gridColumn="span 12"
-        >
-          <Box
-            backgroundColor={colors.primary[400]}
-            height="201px"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            textAlign="center"
-          >
-            <Box>
-              <Typography fontWeight="300" fontSize="15px">
-                You have 28 new orders as of 12:05pm December 19, 2022
-              </Typography>
-              <Typography fontWeight="900" fontSize="50px">
-                28
-              </Typography>
-              <Typography fontWeight="300" fontSize="20px">
-                INSTAGRAM | FACEBOOK | TWITTER | YOUTUBE
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
-        {/* <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-between"
-          gap="10px"
-          gridColumn="span 6"
-        >
-          <Box
-            backgroundColor={colors.primary[400]}
-            height="201px"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            textAlign="center"
-          >
-            <Box>
-              <Typography fontSize="15px" fontWeight="300" mb="10px">
-                Refresh Network
-              </Typography>
-
-              <img src={check} alt="" width="80px" />
-
-              <Typography fontSize="20px" fontWeight="300">
-                No Alerts
-              </Typography>
-            </Box>
-          </Box>
-        </Box> */}
-      </Box>
-
-      {/* 5TH ROW */}
-      <Box
-        marginTop="4px"
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
-        gap="10px"
-      >
-        {/* STATISTICS BAR  */}
-        {/* <Box
-          backgroundColor={colors.primary[400]}
-          height="360px"
-          gridColumn="span 12"
-        >
-          <Box
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-          
-            p="10px 30px"
-            textAlign="center"
-            
-          >
-            <Typography fontSize="25px" fontWeight="600">
-              USER STATISTICS
-            </Typography>
-
-         
-
-            <Box display="flex" gap="20px" mr="200px">
-              <Box display="flex" gap="5px">
-                <Typography fontSize="15px" fontWeight="300">
-                  Ordered Users
-                </Typography>
-                <img src={orderedusersicon} alt="" />
-              </Box>
-
-              <Box display="flex" gap="5px">
-                <Typography fontSize="15px" fontWeight="300">
-                  User Browse Only
-                </Typography>
-                <img src={userbrowseicon} alt="" />
-              </Box>
-            </Box>
-          </Box>
-
-          <Box height="345px" m="-50px -8px 0 -8px">
-            <BarChart />
-          </Box>
-        </Box> */}
       </Box>
     </Box>
   );

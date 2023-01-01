@@ -43,7 +43,7 @@ const Header = () => {
       marginTop="2px"
     >
       <Box
-        gridColumn="span 4"
+        gridColumn="span 6"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
@@ -109,7 +109,7 @@ const Header = () => {
           </p>
         </Box>
       </Box> */}
-      <Box
+      {/* <Box
         gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
@@ -138,13 +138,11 @@ const Header = () => {
               fontWeight: "600",
               marginBottom: "15px",
             }}
-          >
-            {/* 760 */}
-          </p>
+          ></p>
         </Box>
-      </Box>
+      </Box> */}
       <Box
-        gridColumn="span 4"
+        gridColumn="span 6"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
@@ -165,7 +163,7 @@ const Header = () => {
           <img src={overallUsers} alt="" style={{ width: "25px" }} />
         </Box>
         <Box>
-          <p style={{ fontSize: "9px" }}>Overall Users</p>
+          <p style={{ fontSize: "9px" }}>Overall Orders</p>
           <p
             style={{
               fontSize: "9px",

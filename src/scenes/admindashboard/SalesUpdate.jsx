@@ -57,7 +57,7 @@ const SalesUpdate = () => {
                 28
               </Typography>
               <Typography fontWeight="300" fontSize="20px">
-                INSTAGRAM | FACEBOOK | TWITTER | YOUTUBE
+                {/* INSTAGRAM | FACEBOOK | TWITTER | YOUTUBE */}
               </Typography>
             </Box>
           </Box>
