@@ -94,13 +94,12 @@ const SalesUpdate = () => {
       </Box>
 
       {/* 3RD ROW */}
-      <Box
+      {/* <Box
         marginTop="4px"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gap="10px"
       >
-        {/* STATISTICS BAR  */}
         <Box
           backgroundColor={colors.primary[400]}
           height="393px"
@@ -110,18 +109,12 @@ const SalesUpdate = () => {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            // gap="150px"
             p="10px 30px"
             textAlign="center"
-            // marginLeft="90px"
           >
             <Typography fontSize="25px" fontWeight="600">
               SALES STATISTICS
             </Typography>
-
-            {/* <Typography fontSize="20px" fontWeight="600" marginLeft="90px">
-              2022
-            </Typography> */}
 
             <Box display="flex" gap="20px" mr="200px">
               <Box display="flex" gap="5px">
@@ -144,7 +137,7 @@ const SalesUpdate = () => {
             <BarChart />
           </Box>
         </Box>
-      </Box>
+      </Box> */}
 
       {/* 4TH ROW */}
       {/* <Box
