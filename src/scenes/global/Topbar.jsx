@@ -45,7 +45,7 @@ const Topbar = () => {
     >
       {/* ICONS */}
       <Box display="flex" alignItems="center" gap={3}>
-        <IconButton style={{ backgroundColor: "transparent", padding: 0 }}>
+        {/* <IconButton style={{ backgroundColor: "transparent", padding: 0 }}>
           <ChatBubbleOutlineIcon fontSize={"large"} />
           <Typography
             variant="span"
@@ -66,7 +66,7 @@ const Topbar = () => {
           >
             3
           </Typography>
-        </IconButton>
+        </IconButton> */}
         <IconButton
           style={{ backgroundColor: "transparent", padding: 0 }}
           onClick={() => logout()}
