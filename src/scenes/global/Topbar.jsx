@@ -6,6 +6,7 @@ import Clock from "react-live-clock";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import { useLogout } from "../../hooks/useLogout";
 
 const sxNewMsgCount = {
   position: "absolute",
@@ -32,7 +33,12 @@ const Topbar = () => {
   const colors = tokens(theme.palette.mode);
   const [today] = useState(new Date());
   const date = today.toLocaleDateString("en-US").replace(/[/]/g, " | ");
-  const { logout } = useAuthentication();
+  const { logout } = useLogout();
+
+  const handleLogout = (event) => {
+    event.preventDefault();
+    logout();
+  };
 
   return (
     <Box
@@ -69,7 +75,7 @@ const Topbar = () => {
         </IconButton> */}
         <IconButton
           style={{ backgroundColor: "transparent", padding: 0 }}
-          onClick={() => logout()}
+          onClick={handleLogout}
         >
           <PersonOutlinedIcon fontSize={"large"} />
         </IconButton>

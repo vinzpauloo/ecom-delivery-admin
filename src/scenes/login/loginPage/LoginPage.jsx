@@ -13,10 +13,12 @@ import { useAuthentication } from "../../../hooks/useAuthentication";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import axios, { AxiosError } from "axios";
 
 import logo from "../../../assets/images/monkeyLogo.png";
 import styles from "./loginPage.module.scss";
 import constants from "../../../utils/constants.json";
+import { useCalculateHash } from "../../../hooks/useCalculateHash";
 
 const inputStyle = {
   height: "70px",
@@ -44,6 +46,9 @@ const LoginForm = () => {
   const navigate = useNavigate();
   const signIn = useSignIn();
   const { login } = useAuthentication();
+  const { calculateHash } = useCalculateHash();
+
+  const [error, setError] = useState("");
 
   const {
     register,
@@ -54,19 +59,52 @@ const LoginForm = () => {
   });
 
   const onSubmit = async (data) => {
-    const response = await login(data);
+    // const response = await login(data);
 
-    if (!response.error) {
-      signIn({
-        token: response.token,
-        expiresIn: 3600,
-        tokenType: "Bearer",
-        authState: response.user,
-      });
+    // if (!response.error) {
+    //   signIn({
+    //     token: response.token,
+    //     expiresIn: 3600,
+    //     tokenType: "Bearer",
+    //     authState: response.user,
+    //   });
 
-      navigate("/");
-    } else {
-      setErrorApi(response.error);
+    //   navigate("/");
+    // } else {
+    //   setErrorApi(response.error);
+    // }
+
+    try {
+      // START: Access login API
+      const endpoint = "api/admin/login";
+      const options = {
+        headers: {
+          "X-Authorization": calculateHash(endpoint, data),
+        },
+        withCredentials: true,
+      };
+
+      const response = await axios.post(endpoint, data, options);
+      // END: Access login API
+
+      if (response.status === 200) {
+        const { data } = response.data;
+
+        signIn({
+          token: data.token,
+          expiresIn: 3600,
+          tokenType: "Bearer",
+          authState: data.user,
+        });
+
+        navigate("/");
+      }
+    } catch (err) {
+      if (err && err instanceof AxiosError)
+        setError("*" + err.response?.data.message);
+      else if (err && err instanceof Error) setError(err.message);
+
+      // console.log("Error", err);
     }
   };
 
