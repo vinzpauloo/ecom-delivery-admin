@@ -4,16 +4,21 @@ import { tokens } from "../../theme";
 import { useNavigate, Link } from "react-router-dom";
 
 import cpuTraffic from "../../assets/images/cputraffic.png";
-import pageLikes from "../../assets/images/pagelikes.png";
+import pageLikes from "../../assets/images/menu-settings.png";
 import salesUpdate from "../../assets/images/salesupdate.png";
 import overallUsers from "../../assets/images/overallusers.png";
 import { useSystemInfo } from "../../hooks/useSystemInfo";
+import {useBalance} from "../../hooks/useBalance";
 
 const Header = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const { getSystemInfo } = useSystemInfo();
   const [cpu, setCpu] = useState(0);
+
+  const {getBalance} = useBalance();
+  const [balance, setBalance] = useState(0);
+  const [remainText, setRemainText] = useState(0);
 
   const navigate = useNavigate();
 
@@ -29,8 +34,16 @@ const Header = () => {
     setCpu(response.cpu);
   };
 
+const loadBalance = async () => {
+    const response = await getBalance();
+    console.log(response);
+    setBalance(response.balance);
+    setRemainText(response.remaining_text);
+}
+
   useEffect(() => {
     loadSytemInfoCPU();
+    loadBalance();
   }, []);
 
   return (
@@ -43,7 +56,7 @@ const Header = () => {
       marginTop="2px"
     >
       <Box
-        gridColumn="span 6"
+        gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
@@ -76,19 +89,19 @@ const Header = () => {
           </p>
         </Box>
       </Box>
-      {/* <Box
-        gridColumn="span 3"
+      <Box
+        gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"
         gap="10px"
         padding="10px"
-      
+
       >
         <Box
           style={{
             background: "#FB2576",
-            padding: "3px",
+            padding: "5px",
             height: "35px",
             width: "35px",
             borderRadius: "5px",
@@ -97,7 +110,7 @@ const Header = () => {
           <img src={pageLikes} alt="" style={{ width: "25px" }} />
         </Box>
         <Box>
-          <p style={{ fontSize: "9px" }}>Page Likes</p>
+          <p style={{ fontSize: "9px" }}>Current Balance: {balance}</p>
           <p
             style={{
               fontSize: "9px",
@@ -105,10 +118,10 @@ const Header = () => {
               marginBottom: "15px",
             }}
           >
-            
+            Remaining SMS Text: {remainText}
           </p>
         </Box>
-      </Box> */}
+      </Box>
       {/* <Box
         gridColumn="span 4"
         backgroundColor={colors.primary[400]}
@@ -142,7 +155,7 @@ const Header = () => {
         </Box>
       </Box> */}
       <Box
-        gridColumn="span 6"
+        gridColumn="span 4"
         backgroundColor={colors.primary[400]}
         display="flex"
         alignItems="center"

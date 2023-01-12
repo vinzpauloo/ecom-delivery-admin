@@ -78,13 +78,13 @@ const OverallUsers = () => {
           gap="10px"
           gridColumn="span 12"
         >
-          <Box backgroundColor={colors.primary[400]} height="201px">
+          <Box backgroundColor={colors.primary[400]} height="201px" style={{display: "flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign:"center"}}>
             <Box>
               <Typography
                 fontWeight="300"
                 fontSize="15px"
-                textAlign="center"
                 mt="5px"
+                ml="120px"
               >
                 Current Status of Netflow Devices
               </Typography>
@@ -92,8 +92,8 @@ const OverallUsers = () => {
 
             <Box
               width="750px"
-              height="201px"
-              m="-20px 100px 0 150px"
+              height="195px"
+              m="-20px auto 0 auto"
               color="black"
             >
               <Waffle />
